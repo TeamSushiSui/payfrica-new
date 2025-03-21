@@ -1,42 +1,294 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: LexendBold;
+  src: url("../app/assets/fonts/Lexend/Lexend-Bold.ttf");
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@font-face {
+  font-family: LexendLight;
+  src: url("../app/assets/fonts/Lexend/Lexend-Light.ttf");
+}
+
+@font-face {
+  font-family: MontserratExtraBold;
+  src: url("../app/assets/fonts/Montserrat/Montserrat-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: InterLight;
+  src: url("../app/assets/fonts/Inter/Inter_18pt-Light.ttf");
+}
+
+@font-face {
+  font-family: InterBold;
+  src: url("../app/assets/fonts/Inter/Inter_18pt-Bold.ttf");
+}
+
+body {
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: #3c53a4;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background-color: #3c53a4;
+  color: #fff;
+}
+
+.nav-left-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.hamburger-menu {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.top-greeting {
+  font-family: LexendBold;
+}
+
+.bottom-greeting {
+  font-family: LexendLight;
+}
+
+.nav-right-container {
+  display: flex;
+  gap: 30px;
+}
+
+.dp-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.nav-right-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.notis-logo {
+  font-size: 15px;
+  color: #000;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.profile-section {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-name {
+  font-family: LexendBold;
+}
+
+/* Balances Section */
+.balances-section {
+  background-image: url("../app/assets/images/balaces-section-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f6b918;
+  background-position: center;
+  background-blend-mode: overlay;
+  padding: 20px 50px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.balances-greeting {
+  font-size: 36px;
+  font-family: LexendBold;
+  color: #fff;
+}
+
+.total-balance {
+  font-size: 20px;
+  font-family: LexendLight;
+  color: #fff;
+}
+
+.balances-container {
+  overflow: hidden;
+}
+
+.balances-scrollable {
+  display: flex;
+  justify-content: space-between;
+  transition: transform 0.5s ease;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.balances-scrollable.mobile {
+  width: 100%;
+}
+
+.balance-container {
+  background-color: #3c53a4;
+  height: 160px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 8.4px;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.balance-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.balance-container-header div p {
+  font-family: LexendLight;
+  font-size: 15px;
+}
+
+.header-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-display {
+  cursor: pointer;
+}
+
+.balance-menu {
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.balance-menu:hover,
+.balance-menu:active {
+  background-color: #b3afaf;
+}
+
+.balance-container-function {
+  display: flex;
+}
+
+.funds-balance {
+  font-family: MontserratExtraBold;
+  font-size: 30px;
+  color: #cfacba;
+  margin-top: -30px;
+}
+
+.balance-container-function {
+  align-self: flex-end;
+  justify-self: end;
+  gap: 10px;
+  font-size: 15px;
+  font-family: InterLight;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.plus-sign {
+  background-color: #000;
+  border-radius: 50%;
+}
+
+/* Dots */
+.dot-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: white;
+  width: 15px;
+  border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .balances-section {
+    padding: 20px;
   }
+}
+
+@media (max-width: 1400px) {
+  .balance-container {
+    margin-right: 10px;
+    width: 250px;
+  }
+}
+
+/* Quixk Action Stylings */
+.quick-actions-section {
+  background-color: #fff;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.quick-action-heading {
+  font-size: 36px;
+  font-family: LexendBold;
+  color: #000;
+}
+
+.quick-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quick-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 140px;
+  width: 180px;
+  background-color: #fce7eb;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #9d0824;
+  cursor: pointer;
+}
+
+.action-icon {
+  font-size: 30px;
+  color: #9d0824;
+}
+
+.quick-action p {
+  font-size: 20px;
+  font-family: InterBold;
+  color: #9d0824;
 }
