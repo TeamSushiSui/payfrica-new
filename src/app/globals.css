@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -32,7 +33,8 @@
 body {
   max-width: 1500px;
   margin: 0 auto;
-  background-color: #3c53a4;
+  /* font-family: InterLight; */
+  /* background-color: #3c53a4; */
 }
 
 nav {
@@ -291,4 +293,12 @@ nav {
   font-size: 20px;
   font-family: InterBold;
   color: #9d0824;
+}
+
+/* s00laiman.dev CSS Stylings */
+.logo-style {
+  /* flex items-center gap-2 */
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
