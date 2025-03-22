@@ -1,13 +1,11 @@
+"use client";
 import "./globals.css";
 import { ProvidersAndLayout } from "./ProvidersAndLayout";
-
-export const metadata = {
-  title: "Payfrica App",
-  description: "This is the Payfrica App",
-};
+import { GlobalStateProvider } from "../GlobalStateProvider";
 
 export default function RootLayout({ children }) {
   return (
+    <GlobalStateProvider>
     <html lang="en">
       <body>
         <ProvidersAndLayout>
@@ -15,5 +13,6 @@ export default function RootLayout({ children }) {
           </ProvidersAndLayout>
       </body>
     </html>
+    </GlobalStateProvider>
   );
 }

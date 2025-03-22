@@ -7,14 +7,14 @@ import { useCustomWallet } from "@/contexts/CustomWallet";
 import { useRouter } from "next/navigation"; 
 
 export default function LoginPage() {
-  const router = useRouter();
-  const { isConnected, logout, redirectToAuthUrl, emailAddress, address } =
-    useCustomWallet();
-    // const isConnected = true;
-    if (isConnected) {
-      router.push("/dashboard"); // Redirect instead of rendering the page component
-      return null;
-    }
+  // const router = useRouter();
+  // const { isConnected, logout, redirectToAuthUrl, emailAddress, address } =
+  //   useCustomWallet();
+  //   // const isConnected = true;
+  //   if (isConnected) {
+  //     router.push("/dashboard"); // Redirect instead of rendering the page component
+  //     return null;
+  //   }
   return (
     <div className={styles.pageContainer}>
       <div className={styles.loginContainer}>

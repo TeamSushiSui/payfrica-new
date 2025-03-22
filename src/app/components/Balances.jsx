@@ -10,13 +10,12 @@ const Balances = () => {
   const [balances, setBalances] = useState(dummyBalances);
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef(null);
-  const isMobile = useMediaQuery("(max-width:767px)");
+  const isMobile = useMediaQuery('max-width:767px');
 
   useEffect(() => {
     if (containerRef.current && isMobile) {
-      containerRef.current.style.transform = `translateX(-${
-        currentIndex * 100
-      }%)`;
+      containerRef.current.style.transform = `translateX(-${currentIndex * 100
+        }%)`;
     }
   }, [currentIndex, isMobile]);
 
