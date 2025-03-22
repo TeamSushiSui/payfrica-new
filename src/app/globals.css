@@ -1040,7 +1040,7 @@ select {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 90%;
+  width: 100%;
   max-width: 500px;
   text-align: left;
   position: relative;
@@ -1059,9 +1059,14 @@ select {
 
 .deposit-title {
   font-size: 36px;
-  margin-bottom: 20px;
-  text-align: center;
+  margin-bottom: 10px;
   font-family: LexendBold;
+}
+
+.deposit-subtitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: InterLight;
 }
 
 .deposit-option {
@@ -1132,6 +1137,334 @@ select {
 /* Mobile responsiveness */
 @media (max-width: 600px) {
   .deposit-content {
+    padding: 20px;
+  }
+}
+
+/* Withdrawal Confirmation Page */
+.withdrawal-confirmation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fcf5d7; /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.withdrawal-confirmation-content {
+  background-color: #fbe19a;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.withdrawal-details {
+  margin-bottom: 30px;
+}
+
+.confirmation-title {
+  font-family: LexendLight;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.amount {
+  font-family: LexendBold;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.receive-message {
+  font-family: LexendBold;
+  font-size: 16px;
+  color: #666;
+}
+
+.summary-box {
+  background-color: #fcf5d7;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.summary-label {
+  font-size: 16px;
+  color: #c43e26;
+  font-family: InterLight;
+}
+
+.summary-value {
+  font-size: 16px;
+  color: #c43e26; /* Highlight color */
+  font-weight: bold;
+  font-family: InterBold;
+}
+
+.next-button {
+  background-color: #3c53a4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .withdrawal-confirmation-content {
+    padding: 20px;
+  }
+}
+
+/* P2P Agents Page */
+.p2p-agents-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fcf5d7; /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.p2p-agents-content {
+  background-color: #fbe19a;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: left;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.agents-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  /* text-align: center; */
+  font-family: LexendBold;
+}
+
+.agents-subtitle {
+  font-size: 16px;
+  font-family: LexendLight;
+  color: #666;
+  /* text-align: center; */
+  margin-bottom: 20px;
+}
+
+.agent-option {
+  background-color: #fcf5d7;
+  border: 1px solid #fbe19a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.agent-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.lightning-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #ff9800; /* Lightning icon color */
+}
+
+.agent-name {
+  font-size: 18px;
+  margin: 0;
+  font-family: InterBold;
+}
+
+.agent-range {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+  font-family: InterLight;
+}
+
+.agent-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: InterLight;
+}
+
+.detail-button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.zero-fees {
+  background-color: #e8f5e9; /* Light green */
+  color: #4caf50; /* Green */
+}
+
+.few-minutes {
+  background-color: #ffe0b2; /* Light orange */
+  color: #ff9800; /* Orange */
+}
+
+.next-button {
+  background-color: #3f51b5;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
+  font-family: InterBold;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .p2p-agents-content {
+    padding: 20px;
+  }
+}
+
+/* Deposit Confirmation Page */
+.deposit-confirmation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fcf5d7; /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.deposit-confirmation-content {
+  background-color: #fbe19a;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.confirmation-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.amount {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.account-message {
+  font-family: InterBold;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.account-details-box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.account-detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.detail-label {
+  font-size: 16px;
+  font-family: InterBold;
+  color: #333;
+  text-align: left;
+}
+
+.detail-value {
+  font-size: 16px;
+  font-family: InterLight;
+  color: #3f51b5; /* Highlight color */
+  font-weight: bold;
+  text-align: right;
+}
+
+.transfer-button {
+  background-color: #3f51b5;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .deposit-confirmation-content {
     padding: 20px;
   }
 }

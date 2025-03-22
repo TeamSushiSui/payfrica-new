@@ -27,7 +27,7 @@ const SendMoneyOverlay = () => {
                         </button>
                     </div>
                     <div className="overlay-body">
-                        <a href="/payfrica-padi" className="send-option">
+                        <a href="/send/payfricapadi" className="send-option">
                             <div className="option-icon">
                                 <FaPaperPlane />
                             </div>
