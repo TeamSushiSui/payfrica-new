@@ -1,9 +1,20 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./styles.module.css";
 import Bg from "../assets/images/background-with-shapes.png";
+import { useCustomWallet } from "@/contexts/CustomWallet";
+import { useRouter } from "next/navigation"; 
 
 export default function LoginPage() {
+  const router = useRouter();
+  const { isConnected, logout, redirectToAuthUrl, emailAddress, address } =
+    useCustomWallet();
+    // const isConnected = true;
+    if (isConnected) {
+      router.push("/dashboard"); // Redirect instead of rendering the page component
+      return null;
+    }
   return (
     <div className={styles.pageContainer}>
       <div className={styles.loginContainer}>
@@ -21,7 +32,7 @@ export default function LoginPage() {
           <h1 className={styles.heading}>Login</h1>
 
           <div className={styles.socialButtons}>
-            <button className={styles.socialButton}>
+            <button className={styles.socialButton} onClick={redirectToAuthUrl}>
               <span className={styles.socialIconGoogle}>
                 <svg viewBox="0 0 24 24" width="24" height="24">
                   <path

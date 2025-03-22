@@ -1,4 +1,5 @@
 import "./globals.css";
+import { ProvidersAndLayout } from "./ProvidersAndLayout";
 
 export const metadata = {
   title: "Payfrica App",
@@ -8,7 +9,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ProvidersAndLayout>
+          {children}
+          </ProvidersAndLayout>
+      </body>
     </html>
   );
 }
