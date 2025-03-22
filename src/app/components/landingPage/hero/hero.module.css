@@ -1,0 +1,361 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9b234; /* Yellow/orange background */
+  position: relative;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+  background-color: #e74c3c; /* Red header background */
+  color: white;
+  position: relative;
+  z-index: 10;
+  height: 110px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  object-fit: contain;
+}
+
+.desktopNav {
+  display: flex;
+  margin-left: 2rem;
+  background: transparent;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.navItem a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.navItem a:hover {
+  opacity: 0.8;
+}
+
+.discoverButton {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.discoverButton:hover {
+  background-color: white;
+  color: #e74c3c;
+}
+
+/* Mobile Menu Button */
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100vh;
+  background-color: #e74c3c;
+  z-index: 1000;
+  transition: right 0.3s ease;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebarOpen {
+  right: 0;
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.closeSidebarButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.sidebarNav {
+  margin-bottom: 2rem;
+}
+
+.sidebarNavList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarNavItem {
+  margin-bottom: 1.5rem;
+}
+
+.sidebarNavItem a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.sidebarDiscoverButton {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.sidebarDiscoverButton:hover {
+  background-color: white;
+  color: #e74c3c;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.heroContent {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+  height: 35rem;
+}
+
+.heroText {
+  max-width: 600px;
+  margin-left: 4rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryButton {
+  background-color: #c43e26;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.primaryButton:hover {
+  background-color: #c0392b;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #c43e26;
+  transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Update the heroImageContainer to not be absolute on mobile */
+.heroImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Add transform to mirror the image */
+.heroImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform: scaleX(-1);
+  z-index: 3;
+}
+
+/* Campus Section with Horizontal Scroll */
+.campusScrollContainer {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  z-index: 2;
+}
+
+.campusScrollContainer::-webkit-scrollbar {
+  height: 6px;
+}
+
+.campusScrollContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.campusScrollContainer::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+}
+
+.campusSection {
+  display: flex;
+  padding: 0.1rem 2rem;
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+.campusItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 2rem;
+}
+
+.campusItem:last-child {
+  margin-right: 0;
+}
+
+.campusIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.campusText {
+  font-size: 0.75rem;
+  color: white;
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktopNav,
+  .discoverButton {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .heroContent {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .heroText {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .ctaButtons {
+    justify-content: center;
+  }
+
+  .heroImageContainer {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
