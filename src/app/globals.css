@@ -45,6 +45,10 @@ nav {
   color: #fff;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .nav-left-container {
   display: flex;
   gap: 30px;
